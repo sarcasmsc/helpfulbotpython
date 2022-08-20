@@ -1,12 +1,14 @@
 import os
 import random
-import ChessMain4 as chess
+from Chess.images import ChessMain3 as chess
 from os import startfile
 import cv2
 import numpy as np
 import pandas as pd
 import time
 import webbrowser
+import string
+from random import randint
 
 
 def clearscreen():
@@ -37,6 +39,9 @@ def mainmenu():
     elif mainmenuchoice == 'entertainment' or mainmenuchoice == '2':
         clearscreen()
         entertainmentmenu()
+    elif mainmenuchoice == 'toolbox' or mainmenuchoice == '3':
+        clearscreen()
+        toolboxmenu()
     elif mainmenuchoice == 'personal notes' or mainmenuchoice == '4':
         personalnotesmenu()
     elif mainmenuchoice == 'exit' or mainmenuchoice == '6':
@@ -48,19 +53,9 @@ def mainmenu():
         clearscreen()
         mainmenu()
 
-def personalnotesmenu():
-    clearscreen()
-    print('''
-    Welcome to Personal Notes!
-    
-    Sorry this is just for me!''')
-
-    input(' ')
-    mainmenu()
 
 
-
-
+#notes menu
 def notes():
     clearscreen()
     print('''
@@ -241,6 +236,484 @@ def spanishvocabmenu():
         spanishvocabmenu()
 
 
+def jugarfunction():
+    print('''
+    What does Jugar mean?
+    ''')
+
+    jugarfunctionchoice = input('   ').lower()
+
+    if jugarfunctionchoice == 'to play':
+        print('''
+    Good job!
+
+    Jugar means to play!''')
+        input('')
+        clearscreen()
+    elif jugarfunctionchoice == 'exit' or jugarfunctionchoice == 'quit':
+        print('time to study more next time!')
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        jugarfunction()
+
+
+def correrfunction():
+    print('''
+    What does Correr mean?
+    ''')
+
+    correrfunctionchoice = input('   ').lower()
+
+    if correrfunctionchoice == 'to run':
+        print('''
+    Good job!
+
+    Correr means to run!''')
+        input(' ')
+        clearscreen()
+    elif correrfunctionchoice == 'exit' or correrfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        correrfunction()
+
+
+def caminarfunction():
+    print('''
+    What does Caminar mean?
+    ''')
+    caminarfunctionchoice = input('     ').lower()
+
+    if caminarfunctionchoice == 'to walk':
+        print('''
+    Good job!
+
+    Caminar means to walk!''')
+        input('  ')
+        clearscreen()
+    elif caminarfunctionchoice == 'exit' or caminarfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        caminarfunction()
+
+
+def nadarfunction():
+    print('''
+    What does Nadar mean?
+    ''')
+    nadarfunctionchoice = input('   ').lower()
+
+    if nadarfunctionchoice == 'to swim':
+        print('''
+    Good job!
+
+    Nadar means to swim!''')
+        input(' ')
+        clearscreen()
+    elif nadarfunctionchoice == 'exit' or nadarfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        nadarfunction()
+
+
+# Where I stored my variables
+
+imsorry = "I'm sorry I didn't understand that"
+imsorrywrong = "I'm sorry that isn't the correct answer"
+underconstruction = "I'm sorry this page is still under construction"
+chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+
+# Where I am registering webbrowser
+
+webbrowser.register('chrome',
+                    None,
+                    webbrowser.BackgroundBrowser("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"))
+
+
+def spanishvocabset1v2():
+    spanishvocabset1list = [1, 2, 3, 4]
+    spanishvocabset1v2choice = random.sample(spanishvocabset1list, 4)
+    if spanishvocabset1v2choice == [1, 2, 3, 4]:
+        jugarfunction()
+        correrfunction()
+        caminarfunction()
+        nadarfunction()
+    elif spanishvocabset1v2choice == [1, 2, 4, 3]:
+        jugarfunction()
+        correrfunction()
+        nadarfunction()
+        caminarfunction()
+    elif spanishvocabset1v2choice == [1, 3, 2, 4]:
+        jugarfunction()
+        caminarfunction()
+        correrfunction()
+        nadarfunction()
+    elif spanishvocabset1v2choice == [1, 3, 4, 2]:
+        jugarfunction()
+        caminarfunction()
+        nadarfunction()
+        correrfunction()
+    elif spanishvocabset1v2choice == [1, 4, 2, 3]:
+        jugarfunction()
+        nadarfunction()
+        correrfunction()
+        caminarfunction()
+    elif spanishvocabset1v2choice == [1, 4, 3, 2]:
+        jugarfunction()
+        nadarfunction()
+        caminarfunction()
+        correrfunction()
+    elif spanishvocabset1v2choice == [2, 1, 3, 4]:
+        correrfunction()
+        jugarfunction()
+        caminarfunction()
+        nadarfunction()
+    elif spanishvocabset1v2choice == [2, 1, 4, 3]:
+        correrfunction()
+        jugarfunction()
+        nadarfunction()
+        caminarfunction()
+    elif spanishvocabset1v2choice == [2, 3, 1, 4]:
+        correrfunction()
+        caminarfunction()
+        jugarfunction()
+        nadarfunction()
+    elif spanishvocabset1v2choice == [2, 3, 4, 1]:
+        correrfunction()
+        caminarfunction()
+        nadarfunction()
+        jugarfunction()
+    elif spanishvocabset1v2choice == [2, 4, 1, 3]:
+        correrfunction()
+        nadarfunction()
+        jugarfunction()
+        caminarfunction()
+    elif spanishvocabset1v2choice == [2, 4, 3, 1]:
+        correrfunction()
+        nadarfunction()
+        caminarfunction()
+        jugarfunction()
+    elif spanishvocabset1v2choice == [3, 1, 2, 4]:
+        caminarfunction()
+        jugarfunction()
+        correrfunction()
+        nadarfunction()
+    elif spanishvocabset1v2choice == [3, 1, 4, 2]:
+        caminarfunction()
+        jugarfunction()
+        nadarfunction()
+        correrfunction()
+    elif spanishvocabset1v2choice == [3, 2, 1, 4]:
+        caminarfunction()
+        correrfunction()
+        jugarfunction()
+        nadarfunction()
+    elif spanishvocabset1v2choice == [3, 2, 4, 1]:
+        caminarfunction()
+        correrfunction()
+        nadarfunction()
+        jugarfunction()
+    elif spanishvocabset1v2choice == [3, 4, 1, 2]:
+        caminarfunction()
+        nadarfunction()
+        jugarfunction()
+        correrfunction()
+    elif spanishvocabset1v2choice == [3, 4, 2, 1]:
+        caminarfunction()
+        nadarfunction()
+        correrfunction()
+        jugarfunction()
+    elif spanishvocabset1v2choice == [4, 1, 2, 3]:
+        nadarfunction()
+        jugarfunction()
+        correrfunction()
+        caminarfunction()
+    elif spanishvocabset1v2choice == [4, 1, 3, 2]:
+        nadarfunction()
+        jugarfunction()
+        caminarfunction()
+        correrfunction()
+    elif spanishvocabset1v2choice == [4, 2, 1, 3]:
+        nadarfunction()
+        correrfunction()
+        jugarfunction()
+        caminarfunction()
+    elif spanishvocabset1v2choice == [4, 2, 3, 1]:
+        nadarfunction()
+        correrfunction()
+        caminarfunction()
+        jugarfunction()
+    elif spanishvocabset1v2choice == [4, 3, 1, 2]:
+        nadarfunction()
+        caminarfunction()
+        jugarfunction()
+        correrfunction()
+    elif spanishvocabset1v2choice == [4, 3, 2, 1]:
+        nadarfunction()
+        caminarfunction()
+        correrfunction()
+        jugarfunction()
+    else:
+        print(imsorry)
+        mainmenu()
+    print('good job! you complated Vocab Set 1!')
+    input(' ')
+    clearscreen()
+    spanishvocabmenu()
+
+
+def estarfunction():
+    print('''
+    What does Estar mean?
+    ''')
+    estarfunctionchoice = input('   ').lower()
+
+    if estarfunctionchoice == 'to be':
+        print('''
+    Good job!
+
+    Estar means to be!''')
+        input(' ')
+        clearscreen()
+    elif estarfunctionchoice == 'exit' or estarfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        estarfunction()
+
+
+def tenerfunction():
+    print('''
+    What does Tener mean?
+    ''')
+    tenerfunctionchoice = input('   ').lower()
+
+    if tenerfunctionchoice == 'to have':
+        print('''
+    Good job!
+
+    Tener means to have!''')
+        input(' ')
+        clearscreen()
+    elif tenerfunctionchoice == 'exit' or tenerfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        tenerfunction()
+
+
+def irfunction():
+    print('''
+    What does Ir mean?
+    ''')
+    irfunctionchoice = input('   ').lower()
+
+    if irfunctionchoice == 'to go':
+        print('''
+    Good job!
+
+    Ir means to go!''')
+        input(' ')
+        clearscreen()
+    elif irfunctionchoice == 'exit' or irfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        irfunction()
+
+
+def saberfunction():
+    print('''
+    What does Saber mean?
+    ''')
+    saberfunctionchoice = input('   ').lower()
+
+    if saberfunctionchoice == 'to know':
+        print('''
+    Good job!
+
+    Saber means to know!''')
+        input(' ')
+        clearscreen()
+    elif saberfunctionchoice == 'exit' or saberfunctionchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        saberfunction()
+
+
+def spanishvocabset2():
+    spanishvocablist2 = [1, 2, 3, 4]
+    spanishvocabset2choice = random.sample(spanishvocablist2, 4)
+    if spanishvocabset2choice == [1, 2, 3, 4]:
+        estarfunction()
+        tenerfunction()
+        irfunction()
+        saberfunction()
+    elif spanishvocabset2choice == [1, 2, 4, 3]:
+        estarfunction()
+        tenerfunction()
+        saberfunction()
+        irfunction()
+    elif spanishvocabset2choice == [1, 3, 2, 4]:
+        estarfunction()
+        irfunction()
+        tenerfunction()
+        saberfunction()
+    elif spanishvocabset2choice == [1, 3, 4, 2]:
+        estarfunction()
+        irfunction()
+        saberfunction()
+        tenerfunction()
+    elif spanishvocabset2choice == [1, 4, 2, 3]:
+        estarfunction()
+        tenerfunction()
+        saberfunction()
+        irfunction()
+    elif spanishvocabset2choice == [1, 4, 3, 2]:
+        estarfunction()
+        saberfunction()
+        tenerfunction()
+        irfunction()
+    elif spanishvocabset2choice == [2, 1, 3, 4]:
+        tenerfunction()
+        estarfunction()
+        irfunction()
+        saberfunction()
+    elif spanishvocabset2choice == [2, 1, 4, 3]:
+        tenerfunction()
+        estarfunction()
+        saberfunction()
+        irfunction()
+    elif spanishvocabset2choice == [2, 3, 1, 4]:
+        tenerfunction()
+        irfunction()
+        saberfunction()
+        estarfunction()
+    elif spanishvocabset2choice == [2, 3, 4, 1]:
+        tenerfunction()
+        irfunction()
+        saberfunction()
+        estarfunction()
+    elif spanishvocabset2choice == [2, 4, 1, 3]:
+        tenerfunction()
+        saberfunction()
+        estarfunction()
+        irfunction()
+    elif spanishvocabset2choice == [2, 4, 3, 1]:
+        tenerfunction()
+        saberfunction()
+        irfunction()
+        estarfunction()
+    elif spanishvocabset2choice == [3, 1, 2, 4]:
+        irfunction()
+        estarfunction()
+        tenerfunction()
+        saberfunction()
+    elif spanishvocabset2choice == [3, 1, 4, 2]:
+        irfunction()
+        estarfunction()
+        saberfunction()
+        tenerfunction()
+    elif spanishvocabset2choice == [3, 2, 1, 4]:
+        irfunction()
+        tenerfunction()
+        estarfunction()
+        saberfunction()
+    elif spanishvocabset2choice == [3, 2, 4, 1]:
+        irfunction()
+        tenerfunction()
+        saberfunction()
+        estarfunction()
+    elif spanishvocabset2choice == [3, 4, 1, 2]:
+        irfunction()
+        saberfunction()
+        estarfunction()
+        tenerfunction()
+    elif spanishvocabset2choice == [3, 4, 2, 1]:
+        irfunction()
+        saberfunction()
+        tenerfunction()
+        estarfunction()
+    elif spanishvocabset2choice == [4, 1, 2, 3]:
+        saberfunction()
+        estarfunction()
+        tenerfunction()
+        irfunction()
+    elif spanishvocabset2choice == [4, 1, 3, 2]:
+        saberfunction()
+        estarfunction()
+        irfunction()
+        tenerfunction()
+    elif spanishvocabset2choice == [4, 2, 1, 3]:
+        saberfunction()
+        tenerfunction()
+        estarfunction()
+        irfunction()
+    elif spanishvocabset2choice == [4, 2, 3, 1]:
+        saberfunction()
+        tenerfunction()
+        irfunction()
+        estarfunction()
+    elif spanishvocabset2choice == [4, 3, 1, 2]:
+        saberfunction()
+        irfunction()
+        estarfunction()
+        tenerfunction()
+    elif spanishvocabset2choice == [4, 3, 2, 1]:
+        saberfunction()
+        irfunction()
+        tenerfunction()
+        estarfunction()
+    else:
+        print(imsorry)
+        mainmenu()
+    print('good job! you completed Vocab Set 2!')
+    input(' ')
+    clearscreen()
+    spanishvocabmenu()
+
+#entertainment menu
 def entertainmentmenu():
     print('''
     
@@ -409,480 +882,527 @@ def entertainmentvideosspongebobmenu():
         print(imsorry)
         entertainmentvideosspongebobmenu()
 
-
-def jugarfunction():
+#toolbox menu
+def toolboxmenu():
     print('''
-    What does Jugar mean?
+
+    Welcome to the Toolbox Menu!
+    What can I help you with?
+
+    1. Password Generator
+    2. Exit
+
+
     ''')
 
-    jugarfunctionchoice = input('   ').lower()
+    toolboxmenuchoice = input(' ').lower()
 
-    if jugarfunctionchoice == 'to play':
-        print('''
-    Good job!
-        
-    Jugar means to play!''')
-        input('')
-        clearscreen()
-    elif jugarfunctionchoice == 'exit' or jugarfunctionchoice == 'quit':
-        print('time to study more next time!')
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        jugarfunction()
-
-
-def correrfunction():
-    print('''
-    What does Correr mean?
-    ''')
-
-    correrfunctionchoice = input('   ').lower()
-
-    if correrfunctionchoice == 'to run':
-        print('''
-    Good job!
-
-    Correr means to run!''')
-        input(' ')
-        clearscreen()
-    elif correrfunctionchoice == 'exit' or correrfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        correrfunction()
-
-
-def caminarfunction():
-    print('''
-    What does Caminar mean?
-    ''')
-    caminarfunctionchoice = input('     ').lower()
-
-    if caminarfunctionchoice == 'to walk':
-        print('''
-    Good job!
-
-    Caminar means to walk!''')
-        input('  ')
-        clearscreen()
-    elif caminarfunctionchoice == 'exit' or caminarfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        caminarfunction()
-
-
-def nadarfunction():
-    print('''
-    What does Nadar mean?
-    ''')
-    nadarfunctionchoice = input('   ').lower()
-
-    if nadarfunctionchoice == 'to swim':
-        print('''
-    Good job!
-
-    Nadar means to swim!''')
-        input(' ')
-        clearscreen()
-    elif nadarfunctionchoice == 'exit' or nadarfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        nadarfunction()
-
-
-#Where I stored my variables
-
-imsorry = "I'm sorry I didn't understand that"
-imsorrywrong = "I'm sorry that isn't the correct answer"
-underconstruction = "I'm sorry this page is still under construction"
-chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-
-#Where I am registering webbrowser
-
-webbrowser.register('chrome',
-                    None,
-                    webbrowser.BackgroundBrowser("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"))
-
-def spanishvocabset1v2():
-    spanishvocabset1list = [1, 2, 3, 4]
-    spanishvocabset1v2choice = random.sample(spanishvocabset1list, 4)
-    if spanishvocabset1v2choice == [1, 2, 3, 4]:
-        jugarfunction()
-        correrfunction()
-        caminarfunction()
-        nadarfunction()
-    elif spanishvocabset1v2choice == [1, 2, 4, 3]:
-        jugarfunction()
-        correrfunction()
-        nadarfunction()
-        caminarfunction()
-    elif spanishvocabset1v2choice == [1, 3, 2, 4]:
-        jugarfunction()
-        caminarfunction()
-        correrfunction()
-        nadarfunction()
-    elif spanishvocabset1v2choice == [1, 3, 4, 2]:
-        jugarfunction()
-        caminarfunction()
-        nadarfunction()
-        correrfunction()
-    elif spanishvocabset1v2choice == [1, 4, 2, 3]:
-        jugarfunction()
-        nadarfunction()
-        correrfunction()
-        caminarfunction()
-    elif spanishvocabset1v2choice == [1, 4, 3, 2]:
-        jugarfunction()
-        nadarfunction()
-        caminarfunction()
-        correrfunction()
-    elif spanishvocabset1v2choice == [2, 1, 3, 4]:
-        correrfunction()
-        jugarfunction()
-        caminarfunction()
-        nadarfunction()
-    elif spanishvocabset1v2choice == [2, 1, 4, 3]:
-        correrfunction()
-        jugarfunction()
-        nadarfunction()
-        caminarfunction()
-    elif spanishvocabset1v2choice == [2, 3, 1, 4]:
-        correrfunction()
-        caminarfunction()
-        jugarfunction()
-        nadarfunction()
-    elif spanishvocabset1v2choice == [2, 3, 4, 1]:
-        correrfunction()
-        caminarfunction()
-        nadarfunction()
-        jugarfunction()
-    elif spanishvocabset1v2choice == [2, 4, 1, 3]:
-        correrfunction()
-        nadarfunction()
-        jugarfunction()
-        caminarfunction()
-    elif spanishvocabset1v2choice == [2, 4, 3, 1]:
-        correrfunction()
-        nadarfunction()
-        caminarfunction()
-        jugarfunction()
-    elif spanishvocabset1v2choice == [3, 1, 2, 4]:
-        caminarfunction()
-        jugarfunction()
-        correrfunction()
-        nadarfunction()
-    elif spanishvocabset1v2choice == [3, 1, 4, 2]:
-        caminarfunction()
-        jugarfunction()
-        nadarfunction()
-        correrfunction()
-    elif spanishvocabset1v2choice == [3, 2, 1, 4]:
-        caminarfunction()
-        correrfunction()
-        jugarfunction()
-        nadarfunction()
-    elif spanishvocabset1v2choice == [3, 2, 4, 1]:
-        caminarfunction()
-        correrfunction()
-        nadarfunction()
-        jugarfunction()
-    elif spanishvocabset1v2choice == [3, 4, 1, 2]:
-        caminarfunction()
-        nadarfunction()
-        jugarfunction()
-        correrfunction()
-    elif spanishvocabset1v2choice == [3, 4, 2, 1]:
-        caminarfunction()
-        nadarfunction()
-        correrfunction()
-        jugarfunction()
-    elif spanishvocabset1v2choice == [4, 1, 2, 3]:
-        nadarfunction()
-        jugarfunction()
-        correrfunction()
-        caminarfunction()
-    elif spanishvocabset1v2choice == [4, 1, 3, 2]:
-        nadarfunction()
-        jugarfunction()
-        caminarfunction()
-        correrfunction()
-    elif spanishvocabset1v2choice == [4, 2, 1, 3]:
-        nadarfunction()
-        correrfunction()
-        jugarfunction()
-        caminarfunction()
-    elif spanishvocabset1v2choice == [4, 2, 3, 1]:
-        nadarfunction()
-        correrfunction()
-        caminarfunction()
-        jugarfunction()
-    elif spanishvocabset1v2choice == [4, 3, 1, 2]:
-        nadarfunction()
-        caminarfunction()
-        jugarfunction()
-        correrfunction()
-    elif spanishvocabset1v2choice == [4, 3, 2, 1]:
-        nadarfunction()
-        caminarfunction()
-        correrfunction()
-        jugarfunction()
+    if toolboxmenuchoice == 'password generator' or toolboxmenuchoice == '1':
+        passwordgenerator()
+        passwordgeneratorloop()
+    if toolboxmenuchoice == 'exit' or toolboxmenuchoice == '2':
+        mainmenu()
     else:
         print(imsorry)
-        mainmenu()
-    print('good job! you complated Vocab Set 1!')
-    input(' ')
+        toolboxmenu()
+
+def passwordgeneratorloop():
+    passwordgeneratoranswer = input('Would you like another password? Y/N ').lower()
+    if passwordgeneratoranswer == 'y' or passwordgeneratoranswer == 'yes':
+        passwordgenerator()
+        passwordgeneratorloop()
+    else:
+        toolboxmenu()
+
+
+#password generator
+def passwordgenerator():
+    text_file = open('textfiles\\usa.txt', 'r')
+    file_content = text_file.read()
+    content_list = file_content.split('\n')
+
+    # user inputs length of password they would like
+    length = None
+
+    while length == None:
+        try:
+            length = int(input('\nPassword length: '))
+        except:
+            print('sorry that isnt a number')
+
+    # variables
+    num = string.digits
+    symbols = string.punctuation
+
+    random3 = randint(1, 3)
+    random2 = randint(1, 2)
+    number_of_numbers = random2
+    number_of_words = random3
+    randomnumbers = random.choices(num, k=number_of_numbers)
+    randompuncutation = random.choices(symbols, k=number_of_numbers)
+    temp2 = ''.join(randompuncutation) + ''.join(randomnumbers)
+    temp3 = ''.join(random.sample(temp2, len(temp2)))
+
+    content_list_sorted = sorted(content_list, key=len)
+
+    oneletterword = []
+    twoletterword = []
+    threeletterword = []
+    fourletterword = []
+    fiveletterword = []
+    sixletterword = []
+    sevenletterword = []
+    eightletterword = []
+    nineletterword = []
+    tenletterword = []
+    elevenletterword = []
+    twelveletterword = []
+    thirteenletterword = []
+
+    for i in content_list_sorted:
+        if len(i) == 1:
+            oneletterword.append(i)
+        elif len(i) == 2:
+            twoletterword.append(i)
+        elif len(i) == 3:
+            threeletterword.append(i)
+        elif len(i) == 4:
+            fourletterword.append(i)
+        elif len(i) == 5:
+            fiveletterword.append(i)
+        elif len(i) == 6:
+            sixletterword.append(i)
+        elif len(i) == 7:
+            sevenletterword.append(i)
+        elif len(i) == 8:
+            eightletterword.append(i)
+        elif len(i) == 9:
+            nineletterword.append(i)
+        elif len(i) == 10:
+            tenletterword.append(i)
+        elif len(i) == 11:
+            elevenletterword.append(i)
+        elif len(i) == 12:
+            twelveletterword.append(i)
+        elif len(i) == 13:
+            thirteenletterword.append(i)
+        else:
+            pass
+
+    number_of_characters = length - len(temp3)
+
+    if number_of_characters == 1:
+        password = random.choice(oneletterword) + temp3
+    elif number_of_characters == 2:
+        password = random.choice(twoletterword) + temp3
+    elif number_of_characters == 3:
+        password = random.choice(threeletterword) + temp3
+    elif number_of_characters == 4:
+        password = random.choice(fourletterword) + temp3
+    elif number_of_characters == 5:
+        password = random.choice(fiveletterword) + temp3
+    elif number_of_characters == 6:
+        passcombo = randint(1, 4)
+        if passcombo == 1:
+            password = random.choice(sixletterword) + temp3
+        if passcombo == 2:
+            password = random.choice(threeletterword) + random.choice(threeletterword) + temp3
+        if passcombo == 3:
+            password = random.choice(fourletterword) + random.choice(twoletterword) + temp3
+        if passcombo == 4:
+            password = random.choice(twoletterword) + random.choice(fourletterword) + temp3
+    elif number_of_characters == 7:
+        passcombo = randint(1, 5)
+        if passcombo == 1:
+            password = random.choice(sevenletterword) + temp3
+        if passcombo == 2:
+            password = random.choice(threeletterword) + random.choice(fourletterword) + temp3
+        if passcombo == 3:
+            password = random.choice(fourletterword) + random.choice(threeletterword) + temp3
+        if passcombo == 4:
+            password = random.choice(twoletterword) + random.choice(fiveletterword) + temp3
+        if passcombo == 5:
+            password = random.choice(fiveletterword) + random.choice(twoletterword) + temp3
+    elif number_of_characters == 8:
+        passcombo = randint(1, 4)
+        if passcombo == 1:
+            password = random.choice(eightletterword) + temp3
+        if passcombo == 2:
+            password = random.choice(fourletterword) + random.choice(fourletterword) + temp3
+        if passcombo == 3:
+            password = random.choice(fiveletterword) + random.choice(threeletterword) + temp3
+        if passcombo == 4:
+            password = random.choice(threeletterword) + random.choice(fiveletterword) + temp3
+    elif number_of_characters == 9:
+        passcombo = randint(1, 6)
+        if passcombo == 1:
+            password = random.choice(nineletterword) + temp3
+        elif passcombo == 2:
+            password = random.choice(fourletterword) + random.choice(fiveletterword) + temp3
+        elif passcombo == 3:
+            password = random.choice(fiveletterword) + random.choice(fourletterword) + temp3
+        elif passcombo == 4:
+            password = random.choice(threeletterword) + random.choice(threeletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 5:
+            password = random.choice(sixletterword) + random.choice(threeletterword) + temp3
+        elif passcombo == 6:
+            password = random.choice(threeletterword) + random.choice(sixletterword) + temp3
+    elif number_of_characters == 10:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + temp3
+        elif passcombo == 2:
+            password = random.choice(fiveletterword) + random.choice(fiveletterword) + temp3
+        elif passcombo == 3:
+            password = random.choice(sixletterword) + random.choice(fourletterword) + temp3
+        elif passcombo == 4:
+            password = random.choice(fourletterword) + random.choice(sixletterword) + temp3
+        elif passcombo == 5:
+            password = random.choice(fourletterword) + random.choice(threeletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 6:
+            password = random.choice(threeletterword) + random.choice(fourletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 7:
+            password = random.choice(threeletterword) + random.choice(threeletterword) \
+                       + random.choice(fourletterword) + temp3
+        elif passcombo == 8:
+            password = random.choice(fiveletterword) + random.choice(threeletterword) \
+                       + random.choice(twoletterword) + temp3
+        elif passcombo == 9:
+            password = random.choice(threeletterword) + random.choice(twoletterword) \
+                       + random.choice(fiveletterword) + temp3
+        elif passcombo == 10:
+            password = random.choice(twoletterword) + random.choice(fiveletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 11:
+            password = random.choice(threeletterword) + random.choice(fiveletterword) \
+                       + random.choice(twoletterword) + temp3
+        elif passcombo == 12:
+            password = random.choice(fiveletterword) + random.choice(twoletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 13:
+            password = random.choice(fourletterword) + random.choice(fourletterword) \
+                       + random.choice(twoletterword) + temp3
+        elif passcombo == 14:
+            password = random.choice(fourletterword) + random.choice(twoletterword) \
+                       + random.choice(fourletterword) + temp3
+        elif passcombo == 15:
+            password = random.choice(twoletterword) + random.choice(fourletterword) \
+                       + random.choice(fourletterword) + temp3
+    elif number_of_characters == 11:
+        passcombo = randint(1, 8)
+        if passcombo == 1:
+            password = random.choice(elevenletterword) + temp3
+        elif passcombo == 2:
+            password = random.choice(sixletterword) + random.choice(fiveletterword) + temp3
+        elif passcombo == 3:
+            password = random.choice(fiveletterword) + random.choice(sixletterword) + temp3
+        elif passcombo == 4:
+            password = random.choice(sevenletterword) + random.choice(fourletterword) + temp3
+        elif passcombo == 5:
+            password = random.choice(fourletterword) + random.choice(fiveletterword) \
+                       + random.choice(twoletterword) + temp3
+        elif passcombo == 6:
+            password = random.choice(fiveletterword) + random.choice(fourletterword) \
+                       + random.choice(twoletterword) + temp3
+        elif passcombo == 7:
+            password = random.choice(sixletterword) + random.choice(threeletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 8:
+            password = random.choice(sixletterword) + random.choice(threeletterword) \
+                       + random.choice(threeletterword) + temp3
+    elif number_of_characters == 12:
+        passcombo = randint(1, 10)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + temp3
+        elif passcombo == 2:
+            password = random.choice(sixletterword) + random.choice(sixletterword) + temp3
+        elif passcombo == 3:
+            password = random.choice(sevenletterword) + random.choice(fiveletterword) + temp3
+        elif passcombo == 4:
+            password = random.choice(fiveletterword) + random.choice(sevenletterword) + temp3
+        elif passcombo == 5:
+            password = random.choice(eightletterword) + random.choice(fourletterword) + temp3
+        elif passcombo == 6:
+            password = random.choice(fourletterword) + random.choice(eightletterword) + temp3
+        elif passcombo == 7:
+            password = random.choice(threeletterword) + random.choice(threeletterword) \
+                       + random.choice(sixletterword) + temp3
+        elif passcombo == 8:
+            password = random.choice(threeletterword) + random.choice(sixletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 9:
+            password = random.choice(sixletterword) + random.choice(threeletterword) \
+                       + random.choice(threeletterword) + temp3
+        elif passcombo == 10:
+            password = random.choice(fourletterword) + random.choice(fourletterword) \
+                       + random.choice(fourletterword) + temp3
+    elif number_of_characters == 13:
+        passcombo = randint(1, 12)
+        if passcombo == 1:
+            password = random.choice(thirteenletterword) + temp3
+        elif passcombo == 2:
+            password = random.choice(sevenletterword) + random.choice(sixletterword) + temp3
+        elif passcombo == 3:
+            password = random.choice(sixletterword) + random.choice(sevenletterword) + temp3
+        else:
+            password = random.choice(eightletterword) + random.choice(fiveletterword) + temp3
+    elif number_of_characters == 14:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(fourletterword) + random.choice(tenletterword) + temp3
+        elif passcombo == 2:
+            password = random.choice(fiveletterword) + random.choice(nineletterword) + temp3
+        elif passcombo == 3:
+            password = random.choice(sixletterword) + random.choice(eightletterword) + temp3
+        elif passcombo == 4:
+            password = random.choice(sevenletterword) + random.choice(sevenletterword) + temp3
+        elif passcombo == 5:
+            password = random.choice(eightletterword) + random.choice(sixletterword) + temp3
+        elif passcombo == 6:
+            password = random.choice(sixletterword) + random.choice(eightletterword) + temp3
+        elif passcombo == 7:
+            password = random.choice(tenletterword) + random.choice(fourletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(fiveletterword) + temp3
+    elif number_of_characters == 15:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(fiveletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(sixletterword) + temp3
+    elif number_of_characters == 16:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(elevenletterword) + random.choice(fiveletterword) + temp3
+        else:
+            password = random.choice(tenletterword) + random.choice(sixletterword) + temp3
+    elif number_of_characters == 17:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + random.choice(fiveletterword) + temp3
+        else:
+            password = random.choice(elevenletterword) + random.choice(sixletterword) + temp3
+    elif number_of_characters == 18:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + random.choice(sixletterword) + temp3
+        else:
+            password = random.choice(elevenletterword) + random.choice(sevenletterword) + temp3
+    elif number_of_characters == 19:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + random.choice(sevenletterword) + temp3
+        else:
+            password = random.choice(elevenletterword) + random.choice(eightletterword) + temp3
+    elif number_of_characters == 20:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + random.choice(eightletterword) + temp3
+        else:
+            password = random.choice(elevenletterword) + random.choice(nineletterword) + temp3
+    elif number_of_characters == 21:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + random.choice(nineletterword) + temp3
+        else:
+            password = random.choice(elevenletterword) + random.choice(tenletterword) + temp3
+    elif number_of_characters == 22:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(twelveletterword) + random.choice(tenletterword) + temp3
+        else:
+            password = random.choice(elevenletterword) + random.choice(elevenletterword) + temp3
+    elif number_of_characters == 23:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(fiveletterword) \
+                       + random.choice(eightletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(fiveletterword) \
+                       + random.choice(nineletterword) + temp3
+    elif number_of_characters == 24:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(fiveletterword) \
+                       + random.choice(nineletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(fiveletterword) \
+                       + random.choice(tenletterword) + temp3
+    elif number_of_characters == 25:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(sixletterword) \
+                       + random.choice(nineletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(tenletterword) \
+                       + random.choice(sixletterword) + temp3
+    elif number_of_characters == 26:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(sevenletterword) \
+                       + random.choice(nineletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(tenletterword) \
+                       + random.choice(sevenletterword) + temp3
+    elif number_of_characters == 27:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(eightletterword) \
+                       + random.choice(nineletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(tenletterword) \
+                       + random.choice(eightletterword) + temp3
+    elif number_of_characters == 28:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(nineletterword) \
+                       + random.choice(nineletterword) + temp3
+        else:
+            password = random.choice(nineletterword) + random.choice(tenletterword) \
+                       + random.choice(nineletterword) + temp3
+    elif number_of_characters == 29:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(nineletterword) \
+                       + random.choice(tenletterword) + temp3
+        else:
+            password = random.choice(tenletterword) + random.choice(tenletterword) \
+                       + random.choice(nineletterword) + temp3
+    elif number_of_characters == 30:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(fiveletterword) \
+                       + random.choice(tenletterword) + random.choice(fiveletterword) + temp3
+        else:
+            password = random.choice(tenletterword) + random.choice(tenletterword) \
+                       + random.choice(fiveletterword) + random.choice(fiveletterword) + temp3
+    elif number_of_characters == 31:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(sixletterword) \
+                       + random.choice(tenletterword) + random.choice(fiveletterword) + temp3
+        else:
+            password = random.choice(tenletterword) + random.choice(tenletterword) \
+                       + random.choice(sixletterword) + random.choice(fiveletterword) + temp3
+    elif number_of_characters == 32:
+        passcombo = randint(1, 15)
+        if passcombo == 1:
+            password = random.choice(tenletterword) + random.choice(sixletterword) \
+                       + random.choice(tenletterword) + random.choice(sixletterword) + temp3
+        else:
+            password = random.choice(tenletterword) + random.choice(tenletterword) \
+                       + random.choice(sixletterword) + random.choice(sixletterword) + temp3
+    else:
+        password = 'sorry we currently do not support that many characters at the moment'
+
+    print(password)
+
+# personal notes menu
+def personalnotesmenu():
     clearscreen()
-    spanishvocabmenu()
-
-def estarfunction():
     print('''
-    What does Estar mean?
-    ''')
-    estarfunctionchoice = input('   ').lower()
+    Welcome to Personal Notes!
 
-    if estarfunctionchoice == 'to be':
-        print('''
-    Good job!
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
 
-    Estar means to be!''')
-        input(' ')
+    personalnotesmenuchoice = input(' ').lower()
+
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
         clearscreen()
-    elif estarfunctionchoice == 'exit' or estarfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        estarfunction()
-
-def tenerfunction():
-    print('''
-    What does Tener mean?
-    ''')
-    tenerfunctionchoice = input('   ').lower()
-
-    if tenerfunctionchoice == 'to have':
-        print('''
-    Good job!
-
-    Tener means to have!''')
-        input(' ')
-        clearscreen()
-    elif tenerfunctionchoice == 'exit' or tenerfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        tenerfunction()
-
-def irfunction():
-    print('''
-    What does Ir mean?
-    ''')
-    irfunctionchoice = input('   ').lower()
-
-    if irfunctionchoice == 'to go':
-        print('''
-    Good job!
-
-    Ir means to go!''')
-        input(' ')
-        clearscreen()
-    elif irfunctionchoice == 'exit' or irfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        irfunction()
-
-def saberfunction():
-    print('''
-    What does Saber mean?
-    ''')
-    saberfunctionchoice = input('   ').lower()
-
-    if saberfunctionchoice == 'to know':
-        print('''
-    Good job!
-
-    Saber means to know!''')
-        input(' ')
-        clearscreen()
-    elif saberfunctionchoice == 'exit' or saberfunctionchoice == 'quit':
-        print('time to study more next time!')
-        input(' ')
-        clearscreen()
-        spanishvocabmenu()
-    else:
-        print(imsorrywrong)
-        input(' ')
-        clearscreen()
-        saberfunction()
-
-
-def spanishvocabset2():
-    spanishvocablist2 = [1, 2, 3, 4]
-    spanishvocabset2choice = random.sample(spanishvocablist2, 4)
-    if spanishvocabset2choice == [1, 2, 3, 4]:
-        estarfunction()
-        tenerfunction()
-        irfunction()
-        saberfunction()
-    elif spanishvocabset2choice == [1, 2, 4, 3]:
-        estarfunction()
-        tenerfunction()
-        saberfunction()
-        irfunction()
-    elif spanishvocabset2choice == [1, 3, 2, 4]:
-        estarfunction()
-        irfunction()
-        tenerfunction()
-        saberfunction()
-    elif spanishvocabset2choice == [1, 3, 4, 2]:
-        estarfunction()
-        irfunction()
-        saberfunction()
-        tenerfunction()
-    elif spanishvocabset2choice == [1, 4, 2, 3]:
-        estarfunction()
-        tenerfunction()
-        saberfunction()
-        irfunction()
-    elif spanishvocabset2choice == [1, 4, 3, 2]:
-        estarfunction()
-        saberfunction()
-        tenerfunction()
-        irfunction()
-    elif spanishvocabset2choice == [2, 1, 3, 4]:
-        tenerfunction()
-        estarfunction()
-        irfunction()
-        saberfunction()
-    elif spanishvocabset2choice == [2, 1, 4, 3]:
-        tenerfunction()
-        estarfunction()
-        saberfunction()
-        irfunction()
-    elif spanishvocabset2choice == [2, 3, 1, 4]:
-        tenerfunction()
-        irfunction()
-        saberfunction()
-        estarfunction()
-    elif spanishvocabset2choice == [2, 3, 4, 1]:
-        tenerfunction()
-        irfunction()
-        saberfunction()
-        estarfunction()
-    elif spanishvocabset2choice == [2, 4, 1, 3]:
-        tenerfunction()
-        saberfunction()
-        estarfunction()
-        irfunction()
-    elif spanishvocabset2choice == [2, 4, 3, 1]:
-        tenerfunction()
-        saberfunction()
-        irfunction()
-        estarfunction()
-    elif spanishvocabset2choice == [3, 1, 2, 4]:
-        irfunction()
-        estarfunction()
-        tenerfunction()
-        saberfunction()
-    elif spanishvocabset2choice == [3, 1, 4, 2]:
-        irfunction()
-        estarfunction()
-        saberfunction()
-        tenerfunction()
-    elif spanishvocabset2choice == [3, 2, 1, 4]:
-        irfunction()
-        tenerfunction()
-        estarfunction()
-        saberfunction()
-    elif spanishvocabset2choice == [3, 2, 4, 1]:
-        irfunction()
-        tenerfunction()
-        saberfunction()
-        estarfunction()
-    elif spanishvocabset2choice == [3, 4, 1, 2]:
-        irfunction()
-        saberfunction()
-        estarfunction()
-        tenerfunction()
-    elif spanishvocabset2choice == [3, 4, 2, 1]:
-        irfunction()
-        saberfunction()
-        tenerfunction()
-        estarfunction()
-    elif spanishvocabset2choice == [4, 1, 2, 3]:
-        saberfunction()
-        estarfunction()
-        tenerfunction()
-        irfunction()
-    elif spanishvocabset2choice == [4, 1, 3, 2]:
-        saberfunction()
-        estarfunction()
-        irfunction()
-        tenerfunction()
-    elif spanishvocabset2choice == [4, 2, 1, 3]:
-        saberfunction()
-        tenerfunction()
-        estarfunction()
-        irfunction()
-    elif spanishvocabset2choice == [4, 2, 3, 1]:
-        saberfunction()
-        tenerfunction()
-        irfunction()
-        estarfunction()
-    elif spanishvocabset2choice == [4, 3, 1, 2]:
-        saberfunction()
-        irfunction()
-        estarfunction()
-        tenerfunction()
-    elif spanishvocabset2choice == [4, 3, 2, 1]:
-        saberfunction()
-        irfunction()
-        tenerfunction()
-        estarfunction()
+        mainmenu()
     else:
         print(imsorry)
-        mainmenu()
-    print('good job! you completed Vocab Set 2!')
-    input(' ')
-    clearscreen()
-    spanishvocabmenu()
+        input(' ')
+        personalnotesmenu()
 
 
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
+    ''')
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
 
 
 
