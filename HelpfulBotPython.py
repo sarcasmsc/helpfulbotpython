@@ -54,8 +54,21 @@ def mainmenu():
         mainmenu()
 
 
+# Where I stored my variables
 
-#notes menu
+imsorry = "I'm sorry I didn't understand that"
+imsorrywrong = "I'm sorry that isn't the correct answer"
+underconstruction = "I'm sorry this page is still under construction"
+chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+
+# Where I am registering webbrowser
+
+webbrowser.register('chrome',
+                    None,
+                    webbrowser.BackgroundBrowser("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"))
+
+
+# notes menu
 def notes():
     clearscreen()
     print('''
@@ -194,8 +207,7 @@ def spanishmenu():
         spanishvocabmenu()
     elif spanishmenuchoice == 'sentences' or spanishmenuchoice == '2':
         clearscreen()
-        print('im sorry the sentences are not available in this version of helpfulbot')
-        spanishmenu()
+        spanishsentencemenu()
     elif spanishmenuchoice == 'exit' or spanishmenuchoice == '3':
         clearscreen()
         mainmenu()
@@ -334,20 +346,6 @@ def nadarfunction():
         input(' ')
         clearscreen()
         nadarfunction()
-
-
-# Where I stored my variables
-
-imsorry = "I'm sorry I didn't understand that"
-imsorrywrong = "I'm sorry that isn't the correct answer"
-underconstruction = "I'm sorry this page is still under construction"
-chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-
-# Where I am registering webbrowser
-
-webbrowser.register('chrome',
-                    None,
-                    webbrowser.BackgroundBrowser("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"))
 
 
 def spanishvocabset1v2():
@@ -713,7 +711,279 @@ def spanishvocabset2():
     clearscreen()
     spanishvocabmenu()
 
-#entertainment menu
+
+def spanishsentencemenu():
+    print('''
+    
+    Spanish Sentence Menu
+    1. Sentence set 1
+    2. Sentence set 2
+    3. Exit
+    
+    
+    ''')
+
+    spanishsentencemunuchoice = input(' ').lower()
+
+    if spanishsentencemunuchoice == 'sentence set 1' or spanishsentencemunuchoice == '1':
+        clearscreen()
+        spanishsentenceset1()
+    elif spanishsentencemunuchoice == 'sentence set 2' or spanishsentencemunuchoice == '2':
+        print(imsorry)
+        clearscreen()
+        spanishsentencemenu()
+    elif spanishsentencemunuchoice == 'exit' or spanishsentencemunuchoice == '3':
+        clearscreen()
+        spanishmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        clearscreen()
+        spanishsentencemunu()
+
+
+def spanishsentenceset1():
+    spanishsentencelist1 = [1, 2, 3, 4]
+    spanishsentencechoice1 = random.sample(spanishsentencelist1, 4)
+    if spanishsentencechoice1 == [1, 2, 3, 4]:
+        spanishsentence1()
+        spanishsentence2()
+        spanishsentence3()
+        spanishsentence4()
+    elif spanishsentencechoice1 == [1, 2, 4, 3]:
+        spanishsentence1()
+        spanishsentence2()
+        spanishsentence4()
+        spanishsentence3()
+    elif spanishsentencechoice1 == [1, 3, 2, 4]:
+        spanishsentence1()
+        spanishsentence3()
+        spanishsentence2()
+        spanishsentence4()
+    elif spanishsentencechoice1 == [1, 3, 4, 2]:
+        spanishsentence1()
+        spanishsentence3()
+        spanishsentence4()
+        spanishsentence2()
+    elif spanishsentencechoice1 == [1, 4, 2, 3]:
+        spanishsentence1()
+        spanishsentence4()
+        spanishsentence2()
+        spanishsentence3()
+    elif spanishsentencechoice1 == [1, 4, 3, 2]:
+        spanishsentence1()
+        spanishsentence4()
+        spanishsentence3()
+        spanishsentence2()
+    elif spanishsentencechoice1 == [2, 1, 3, 4]:
+        spanishsentence2()
+        spanishsentence1()
+        spanishsentence3()
+        spanishsentence4()
+    elif spanishsentencechoice1 == [2, 1, 4, 3]:
+        spanishsentence2()
+        spanishsentence1()
+        spanishsentence4()
+        spanishsentence3()
+    elif spanishsentencechoice1 == [2, 3, 1, 4]:
+        spanishsentence2()
+        spanishsentence3()
+        spanishsentence1()
+        spanishsentence4()
+    elif spanishsentencechoice1 == [2, 3, 4, 1]:
+        spanishsentence2()
+        spanishsentence3()
+        spanishsentence4()
+        spanishsentence1()
+    elif spanishsentencechoice1 == [2, 4, 1, 3]:
+        spanishsentence2()
+        spanishsentence4()
+        spanishsentence1()
+        spanishsentence3()
+    elif spanishsentencechoice1 == [2, 4, 3, 1]:
+        spanishsentence2()
+        spanishsentence4()
+        spanishsentence3()
+        spanishsentence1()
+    elif spanishsentencechoice1 == [3, 1, 2, 4]:
+        spanishsentence3()
+        spanishsentence1()
+        spanishsentence2()
+        spanishsentence4()
+    elif spanishsentencechoice1 == [3, 1, 4, 2]:
+        spanishsentence3()
+        spanishsentence1()
+        spanishsentence4()
+        spanishsentence2()
+    elif spanishsentencechoice1 == [3, 2, 1, 4]:
+        spanishsentence3()
+        spanishsentence2()
+        spanishsentence1()
+        spanishsentence4()
+    elif spanishsentencechoice1 == [3, 2, 4, 1]:
+        spanishsentence3()
+        spanishsentence2()
+        spanishsentence4()
+        spanishsentence1()
+    elif spanishsentencechoice1 == [3, 4, 1, 2]:
+        spanishsentence3()
+        spanishsentence4()
+        spanishsentence1()
+        spanishsentence2()
+    elif spanishsentencechoice1 == [3, 4, 2, 1]:
+        spanishsentence3()
+        spanishsentence4()
+        spanishsentence2()
+        spanishsentence1()
+    elif spanishsentencechoice1 == [4, 1, 2, 3]:
+        spanishsentence4()
+        spanishsentence1()
+        spanishsentence2()
+        spanishsentence3()
+    elif spanishsentencechoice1 == [4, 1, 3, 2]:
+        spanishsentence4()
+        spanishsentence1()
+        spanishsentence3()
+        spanishsentence2()
+    elif spanishsentencechoice1 == [4, 2, 1, 3]:
+        spanishsentence4()
+        spanishsentence2()
+        spanishsentence1()
+        spanishsentence3()
+    elif spanishsentencechoice1 == [4, 2, 3, 1]:
+        spanishsentence4()
+        spanishsentence2()
+        spanishsentence3()
+        spanishsentence1()
+    elif spanishsentencechoice1 == [4, 3, 1, 2]:
+        spanishsentence4()
+        spanishsentence3()
+        spanishsentence1()
+        spanishsentence2()
+    elif spanishsentencechoice1 == [4, 3, 2, 1]:
+        spanishsentence4()
+        spanishsentence3()
+        spanishsentence2()
+        spanishsentence1()
+    else:
+        print(imsorry)
+        mainmenu()
+    print('good job! you completed Sentence Set 1!')
+    input(' ')
+    clearscreen()
+    spanishsentencemenu()
+
+
+def spanishsentence1():
+    print('''
+    Translate the sentence
+    
+    Quisiera unas papas fritas.
+    ''')
+    spanishsentence1choice = input('   ').lower()
+
+    if spanishsentence1choice == 'i would like some french fries' or \
+            spanishsentence1choice == 'i would like french fries':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentence1choice == 'exit' or spanishsentence1choice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence1()
+
+
+def spanishsentence2():
+    print('''
+    Translate the sentence
+
+    El cafe esta listo.
+    ''')
+    spanishsentence2choice = input('   ').lower()
+
+    if spanishsentence2choice == 'the coffee is ready':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentence2choice == 'exit' or spanishsentence2choice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence2()
+
+
+def spanishsentence3():
+    print('''
+    Translate the sentence
+
+    La leche esta en la heladera.
+    ''')
+    spanishsentence3choice = input('   ').lower()
+
+    if spanishsentence3choice == 'the milk is in the fridge':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentence3choice == 'exit' or spanishsentence3choice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence3()
+
+
+def spanishsentence4():
+    print('''
+    Translate the sentence
+
+    Tienen helado de chocolate y vainilla.
+    ''')
+    spanishsentence4choice = input('   ').lower()
+
+    if spanishsentence4choice == 'they have chocolate and vanilla ice cream':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentence4choice == 'exit' or spanishsentence4choice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence4()
+
+
+# entertainment menu
 def entertainmentmenu():
     print('''
     
@@ -853,6 +1123,7 @@ def bighero6():
     #        break
     #        entertainmentmenuvideos()
 
+
 def entertainmentvideosspongebobmenu():
     print('''
     
@@ -882,7 +1153,8 @@ def entertainmentvideosspongebobmenu():
         print(imsorry)
         entertainmentvideosspongebobmenu()
 
-#toolbox menu
+
+# toolbox menu
 def toolboxmenu():
     print('''
 
@@ -906,6 +1178,7 @@ def toolboxmenu():
         print(imsorry)
         toolboxmenu()
 
+
 def passwordgeneratorloop():
     passwordgeneratoranswer = input('Would you like another password? Y/N ').lower()
     if passwordgeneratoranswer == 'y' or passwordgeneratoranswer == 'yes':
@@ -915,7 +1188,7 @@ def passwordgeneratorloop():
         toolboxmenu()
 
 
-#password generator
+# password generator
 def passwordgenerator():
     text_file = open('textfiles\\usa.txt', 'r')
     file_content = text_file.read()
@@ -1300,6 +1573,7 @@ def passwordgenerator():
 
     print(password)
 
+
 # personal notes menu
 def personalnotesmenu():
     clearscreen()
@@ -1403,9 +1677,6 @@ def personalnotesleagueaccounts():
         personalnotesmenu()
     else:
         personalnotesmenu()
-
-
-
 
 
 mainmenu()
