@@ -2,6 +2,7 @@ import os
 import random
 from Chess.images import ChessMain3 as chess
 from os import startfile
+from Projects.TicTacToe import TicTacToePygame2
 import cv2
 import numpy as np
 import pandas as pd
@@ -1022,7 +1023,8 @@ def entertainmentgamesmenu():
     
     1. Rock Paper Scissors
     2. Chess
-    3. Exit
+    3. Tic Tac Toe
+    4. Exit
     
     ''')
 
@@ -1036,7 +1038,12 @@ def entertainmentgamesmenu():
             chess.main()
             clearscreen()
             entertainmentgamesmenu()
-    elif entertainmentgamesmenuchoice == 'exit' or entertainmentgamesmenuchoice == '3':
+    elif entertainmentgamesmenuchoice == 'chess' or entertainmentgamesmenuchoice == '3':
+        if __name__ == '__main__':
+            TicTacToePygame2.main()
+            clearscreen()
+            entertainmentgamesmenu()
+    elif entertainmentgamesmenuchoice == 'exit' or entertainmentgamesmenuchoice == '4':
         entertainmentmenu()
     else:
         print(imsorry)
@@ -1580,9 +1587,103 @@ def personalnotesmenu():
     print('''
     Welcome to Personal Notes!
 
-    Sorry but these notes are for my use only and aren't included''')
-    
-    input(' ')
-    mainmenu()
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
+
+    personalnotesmenuchoice = input(' ').lower()
+
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesmenu()
+
+
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
+    ''')
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
+
 
 mainmenu()
