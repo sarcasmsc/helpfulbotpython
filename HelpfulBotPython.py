@@ -1,6 +1,6 @@
 import os
 import random
-from Chess.images import ChessMain3 as chess
+import ChessMain3 as chess
 from os import startfile
 import TicTacToePygame2
 import cv2
