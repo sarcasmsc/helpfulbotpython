@@ -1,8 +1,8 @@
 import os
 import random
-import ChessMain3 as chess
+from Chess.images import ChessMain3 as chess
 from os import startfile
-import TicTacToePygame2
+from Projects.TicTacToe import TicTacToePygame2
 import cv2
 import numpy as np
 import pandas as pd
@@ -10,6 +10,8 @@ import time
 import webbrowser
 import string
 from random import randint
+from random import choices
+from random import sample
 
 
 def clearscreen():
@@ -44,8 +46,7 @@ def mainmenu():
         clearscreen()
         toolboxmenu()
     elif mainmenuchoice == 'personal notes' or mainmenuchoice == '4':
-        print('Sorry this is section is only for me')
-        mainmenu()
+        personalnotesmenu()
     elif mainmenuchoice == 'exit' or mainmenuchoice == '6':
         print('Goodbye')
         quit()
@@ -226,7 +227,8 @@ def spanishvocabmenu():
     Spanish Vocab Menu
     1. Vocab set 1
     2. Vocab set 2
-    3. Exit
+    3. Vocab set 3
+    4. Exit
     
     
     ''')
@@ -240,7 +242,11 @@ def spanishvocabmenu():
         spanishvocabset2()
         clearscreen()
         spanishvocabmenu()
-    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '3':
+    elif spanishvocabmenuchoice == 'vocab set 3' or spanishvocabmenuchoice == '3':
+        spanishvocabset3()
+        clearscreen()
+        spanishvocabmenu()
+    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '4':
         clearscreen()
         spanishmenu()
     else:
@@ -714,6 +720,167 @@ def spanishvocabset2():
     spanishvocabmenu()
 
 
+def partirfunction():
+    print('''
+    What does partir mean?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'to leave':
+        print('''
+    Good job!
+
+    Partir means to leave!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        partirfunction()
+
+
+def pedirfunction():
+    print('''
+    What does pedir mean?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'to ask':
+        print('''
+    Good job!
+
+    Pedir means to ask!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        pedirfunction()
+
+
+def aburrirfunction():
+    print('''
+    What does aburrir mean?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'to bore':
+        print('''
+    Good job!
+
+    Aburrir means to bore!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        aburrirfunction()
+
+
+def buscarfunction():
+    print('''
+    What does buscar mean?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'to look for':
+        print('''
+    Good job!
+
+    Buscar means to look for!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        buscarfunction()
+
+def cantarfunction():
+    print('''
+    What does cantar mean?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'to sing':
+        print('''
+    Good job!
+
+    Cantar means to sing!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        cantarfunction()
+
+def cocinarfunction():
+    print('''
+    What does cocinar mean?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'to cook':
+        print('''
+    Good job!
+
+    Cocinar means to cook!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        cocinarfunction()
+
+def spanishvocabset3():
+    spanishvocabset3list = [partirfunction, pedirfunction, aburrirfunction, buscarfunction, cantarfunction, cocinarfunction]
+    vocabset3 = random.sample(spanishvocabset3list, k=6)
+    vocabset3[0]()
+    vocabset3[1]()
+    vocabset3[2]()
+    vocabset3[3]()
+    vocabset3[4]()
+    vocabset3[5]()
+    print('good job! you completed Vocab Set 3!')
+    input(' ')
+    clearscreen()
+    spanishvocabmenu()
+
 def spanishsentencemenu():
     print('''
     
@@ -742,7 +909,6 @@ def spanishsentencemenu():
         input(' ')
         clearscreen()
         spanishsentencemunu()
-
 
 def spanishsentenceset1():
     spanishsentencelist1 = [1, 2, 3, 4]
@@ -983,7 +1149,6 @@ def spanishsentence4():
         input(' ')
         clearscreen()
         spanishsentence4()
-
 
 # entertainment menu
 def entertainmentmenu():
@@ -1586,6 +1751,105 @@ def passwordgenerator():
 def personalnotesmenu():
     clearscreen()
     print('''
-    Sorry this is for my personal use only''')
+    Welcome to Personal Notes!
+
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
+
+    personalnotesmenuchoice = input(' ').lower()
+
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesmenu()
+
+
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
+    ''')
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
+
 
 mainmenu()
