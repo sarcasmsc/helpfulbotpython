@@ -1150,6 +1150,195 @@ def spanishsentence4():
         clearscreen()
         spanishsentence4()
 
+        
+def spanishcolorrojo():
+    print('''
+    What is Rojo?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'red':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcolorrojo()
+
+
+def spanishcolorazul():
+    print('''
+    What is Azul?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'blue':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcolorazul()
+
+def spanishcoloranaranjado():
+    print('''
+    What is Anaranjado?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'orange':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcoloranaranjado()
+
+
+def spanishcolorverde():
+    print('''
+    What is Verde?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'green':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcolorverde()
+
+
+def spanishcoloramarillo():
+    print('''
+    What is Amarillo?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'yellow':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcoloramarillo()
+
+
+def spanishcolorblanco():
+    print('''
+    What is Blanco?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'white':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcolorblanco()
+
+def spanishcolornegro():
+    print('''
+    What is Negro?
+    ''')
+    spanishcolorchoice = input('   ').lower()
+
+    if spanishcolorchoice == 'black':
+        print('''
+    Good job!
+
+    You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishcolorchoice == 'exit' or spanishcolorchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcolornegro()
+
+
+def spanishvocabsetcolors():
+    spanishvocabsetcolorslist = [spanishcolorrojo, spanishcolorblanco, spanishcolorverde,
+                                 spanishcoloramarillo, spanishcolorazul, spanishcoloranaranjado, spanishcolornegro]
+    vocabsetcolors = random.sample(spanishvocabsetcolorslist, k=6)
+    vocabsetcolors[0]()
+    vocabsetcolors[1]()
+    vocabsetcolors[2]()
+    vocabsetcolors[3]()
+    vocabsetcolors[4]()
+    vocabsetcolors[5]()
+    print('good job! you completed Colors Vocab!')
+    input(' ')
+    clearscreen()
+    spanishvocabmenu()
+
 # entertainment menu
 def entertainmentmenu():
     print('''
