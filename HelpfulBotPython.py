@@ -1,8 +1,8 @@
 import os
 import random
-import ChessMain4 as chess
+from Chess.images import ChessMain4 as chess
 from os import startfile
-import TicTacToePygame2
+from Projects.TicTacToe import TicTacToePygame2
 import cv2
 import numpy as np
 import pandas as pd
@@ -229,7 +229,9 @@ def spanishvocabmenu():
     2. Vocab set 2
     3. Vocab set 3
     4. Colors
-    5. Exit
+    5. Numbers
+    6. Months
+    7. Exit
     
     
     ''')
@@ -251,7 +253,15 @@ def spanishvocabmenu():
         spanishvocabsetcolors()
         clearscreen()
         spanishvocabmenu()
-    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '5':
+    elif spanishvocabmenuchoice == 'vocab set 5' or spanishvocabmenuchoice == '5':
+        spanishvocabsetnumbersmenu()
+        clearscreen()
+        spanishvocabmenu()
+    elif spanishvocabmenuchoice == 'vocab set 6' or spanishvocabmenuchoice == '6':
+        spanishvocabsetmonths()
+        clearscreen()
+        spanishvocabmenu()
+    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '7':
         clearscreen()
         spanishmenu()
     else:
@@ -885,6 +895,666 @@ def spanishvocabset3():
     input(' ')
     clearscreen()
     spanishvocabmenu()
+
+def spanishvocabsetnumbersmenu():
+    print('''
+    
+    What would you like to work on?
+    
+    1. Numbers Set 1
+    2. Numbers Set 2
+    3. Exit
+    
+    
+    ''')
+
+    spanishmenuchoice = input(' ').lower()
+
+    if spanishmenuchoice == 'numbers set 1' or spanishmenuchoice == 'set 1' or spanishmenuchoice == '1':
+        spanishnumbersset1()
+        clearscreen()
+        spanishvocabmenu()
+    elif spanishmenuchoice == 'numbers set 2' or spanishmenuchoice == 'set 2' or spanishmenuchoice == '2':
+        print(underconstruction)
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    elif spanishmenuchoice == 'exit' or spanishmenuchoice == '3':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input('')
+        clearscreen()
+        spanishmenu()
+
+def spanishunofunction():
+    print('''
+    What number is Uno?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'one' or spanishchoice == '1':
+        print('''
+    Good job!
+
+    Uno is One!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishunofunction()
+
+
+def spanishdosfunction():
+    print('''
+    What number is Dos?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'two' or spanishchoice == '2':
+        print('''
+    Good job!
+
+    Dos is Two!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishdosfunction()
+
+
+def spanishtresfunction():
+    print('''
+    What number is Tres?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'three' or spanishchoice == '3':
+        print('''
+    Good job!
+
+    Tres is Three!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishtresfunction()
+
+
+def spanishcuatrofunction():
+    print('''
+    What number is Cuatro?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'four' or spanishchoice == '4':
+        print('''
+    Good job!
+
+    Cuatro is Four!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcuatrofunction()
+
+
+def spanishcincofunction():
+    print('''
+    What number is Cinco?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'five' or spanishchoice == '5':
+        print('''
+    Good job!
+
+    Cinco is Five!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishcincofunction()
+
+
+def spanishseisfunction():
+    print('''
+    What number is Seis?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'six' or spanishchoice == '6':
+        print('''
+    Good job!
+
+    Seis is Six!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishseisfunction()
+
+
+def spanishsietefunction():
+    print('''
+    What number is Siete?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'seven' or spanishchoice == '7':
+        print('''
+    Good job!
+
+    Siete is Seven! (the best number)''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsietefunction()
+
+
+def spanishochofunction():
+    print('''
+    What number is Ocho?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'eight' or spanishchoice == '8':
+        print('''
+    Good job!
+
+    Ocho is Eight!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishochofunction()
+
+
+def spanishnuevefunction():
+    print('''
+    What number is Nueve?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'nine' or spanishchoice == '9':
+        print('''
+    Good job!
+
+    Nueve is Nine!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishnuevefunction()
+
+
+def spanishdiezfunction():
+    print('''
+    What number is Diez?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'ten' or spanishchoice == '10':
+        print('''
+    Good job!
+
+    Diez is Ten!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishdiezfunction()
+
+
+def spanishochocincofunction():
+    print('''
+    Bonus Question (type 'pass' to skip)
+    Who is Ocho Cinco?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'chad johnson':
+        print('''
+    Thats right!
+
+    Ocho Cinco is Chad Johnson!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'clown' or spanishchoice == 'a clown':
+        print('''
+    Thats mean, no need to be rude.''')
+        input(' ')
+        clearscreen()
+        spanishochocincofunction()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabsetnumbersmenu()
+    elif spanishchoice == 'pass':
+        print('Ocho Cinco is Chad Johnson!')
+        input(' ')
+        clearscreen()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+
+
+def spanishnumbersset1():
+    spanishnumbersset1list = [spanishunofunction, spanishdosfunction, spanishtresfunction, spanishcuatrofunction,
+                              spanishcincofunction, spanishseisfunction, spanishsietefunction, spanishochofunction,
+                              spanishnuevefunction, spanishdiezfunction]
+    spanishnumbersset1 = random.sample(spanishnumbersset1list, k=10)
+    spanishnumbersset1[0]()
+    spanishnumbersset1[1]()
+    spanishnumbersset1[2]()
+    spanishnumbersset1[3]()
+    spanishnumbersset1[4]()
+    spanishnumbersset1[5]()
+    spanishnumbersset1[6]()
+    spanishnumbersset1[7]()
+    spanishnumbersset1[8]()
+    spanishnumbersset1[9]()
+    spanishochocincofunction()
+    print('good job! you completed Numbers Set 1!')
+    input(' ')
+    clearscreen()
+    spanishvocabsetnumbersmenu()
+
+
+def spanishenerofunction():
+    print('''
+    What month is Enero?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'january':
+        print('''
+    Good job!
+
+    Enero is January!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishenerofunction()
+
+
+def spanishfebrerofunction():
+    print('''
+    What month is Febrero?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'february':
+        print('''
+    Good job!
+
+    Febrero is February!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishfebrerofunction()
+
+
+def spanishmarzofunction():
+    print('''
+    What month is Marzo?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'march':
+        print('''
+    Good job!
+
+    Marzo is March!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishmarzofunction()
+
+
+def spanishabrilfunction():
+    print('''
+    What month is Abril?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'april':
+        print('''
+    Good job!
+
+    Abril is April!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishabrilfunction()
+
+
+def spanishmayofunction():
+    print('''
+    What month is Mayo?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'may':
+        print('''
+    Good job!
+
+    Mayo is May!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishmayofunction()
+
+
+def spanishjuniofunction():
+    print('''
+    What month is Junio?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'june':
+        print('''
+    Good job!
+
+    Junio is June!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishjuniounction()
+
+
+def spanishjuliofunction():
+    print('''
+    What month is Julio?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'july':
+        print('''
+    Good job!
+
+    Julio is July!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishjuliounction()
+
+
+def spanishagostofunction():
+    print('''
+    What month is Agosto?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'august':
+        print('''
+    Good job!
+
+    Agosto is August!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishagostofunction()
+
+
+def spanishseptiembrefunction():
+    print('''
+    What month is Septiembre?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'september':
+        print('''
+    Good job!
+
+    Septiembre is September!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishseptiembrefunction()
+
+
+def spanishoctubrefunction():
+    print('''
+    What month is Octubre?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'october':
+        print('''
+    Good job!
+
+    Octubre is October!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishoctubrefunction()
+
+
+def spanishnoviembrefunction():
+    print('''
+    What month is Noviembre?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'november':
+        print('''
+    Good job!
+
+    Noviembre is November!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+
+
+def spanishdiciembrefunction():
+    print('''
+    What month is Diciembre?
+    ''')
+    spanishchoice = input('   ').lower()
+
+    if spanishchoice == 'december':
+        print('''
+    Good job!
+
+    Diciembre is December!''')
+        input(' ')
+        clearscreen()
+    elif spanishchoice == 'exit' or spanishchoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+
+def spanishvocabsetmonths():
+    spanishvocabmonthslist = [spanishenerofunction, spanishfebrerofunction, spanishmarzofunction,
+                              spanishabrilfunction, spanishmayofunction, spanishjuniofunction,
+                              spanishjuliofunction, spanishagostofunction, spanishseptiembrefunction,
+                              spanishoctubrefunction, spanishnoviembrefunction, spanishdiciembrefunction]
+    spanishmonthset = random.sample(spanishvocabmonthslist, k=12)
+    spanishmonthset[0]()
+    spanishmonthset[1]()
+    spanishmonthset[2]()
+    spanishmonthset[3]()
+    spanishmonthset[4]()
+    spanishmonthset[5]()
+    spanishmonthset[6]()
+    spanishmonthset[7]()
+    spanishmonthset[8]()
+    spanishmonthset[9]()
+    spanishmonthset[10]()
+    spanishmonthset[11]()
+    print('good job! you completed the Month Vocab Set!')
+    input(' ')
+    clearscreen()
+    spanishvocabmenu()
+
 
 def spanishsentencemenu():
     print('''
@@ -2117,10 +2787,103 @@ def personalnotesmenu():
     print('''
     Welcome to Personal Notes!
 
-    Sorry, this section is just for me!''')
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
 
     personalnotesmenuchoice = input(' ').lower()
-    mainmenu()
+
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesmenu()
+
+
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
+    ''')
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
 
 
 mainmenu()
