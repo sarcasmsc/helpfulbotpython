@@ -1,8 +1,8 @@
 import os
 import random
-from Chess.images import ChessMain4 as chess
+import ChessMain4 as chess
 from os import startfile
-from Projects.TicTacToe import TicTacToePygame2
+import TicTacToePygame2
 import cv2
 import numpy as np
 import pandas as pd
