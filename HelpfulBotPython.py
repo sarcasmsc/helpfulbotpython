@@ -1,6 +1,6 @@
 import os
 import random
-from Chess.images import ChessMain3 as chess
+from Chess.images import ChessMain4 as chess
 from os import startfile
 from Projects.TicTacToe import TicTacToePygame2
 import cv2
@@ -228,7 +228,8 @@ def spanishvocabmenu():
     1. Vocab set 1
     2. Vocab set 2
     3. Vocab set 3
-    4. Exit
+    4. Colors
+    5. Exit
     
     
     ''')
@@ -246,7 +247,11 @@ def spanishvocabmenu():
         spanishvocabset3()
         clearscreen()
         spanishvocabmenu()
-    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '4':
+    elif spanishvocabmenuchoice == 'vocab set 4' or spanishvocabmenuchoice == '4':
+        spanishvocabsetcolors()
+        clearscreen()
+        spanishvocabmenu()
+    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '5':
         clearscreen()
         spanishmenu()
     else:
@@ -898,9 +903,8 @@ def spanishsentencemenu():
         clearscreen()
         spanishsentenceset1()
     elif spanishsentencemunuchoice == 'sentence set 2' or spanishsentencemunuchoice == '2':
-        print(imsorry)
         clearscreen()
-        spanishsentencemenu()
+        spanishsentenceset2()
     elif spanishsentencemunuchoice == 'exit' or spanishsentencemunuchoice == '3':
         clearscreen()
         spanishmenu()
@@ -1150,7 +1154,177 @@ def spanishsentence4():
         clearscreen()
         spanishsentence4()
 
-        
+def spanishsentenceset2():
+    spanishsentencelist2 = [spanishsentence1set2, spanishsentence2set2, spanishsentence3set2,
+                            spanishsentence4set2, spanishsentence5set2, spanishsentence6set2]
+    sentenceset2 = random.sample(spanishsentencelist2, k=6)
+    sentenceset2[0]()
+    sentenceset2[1]()
+    sentenceset2[2]()
+    sentenceset2[3]()
+    sentenceset2[4]()
+    sentenceset2[5]()
+    print('good job! you completed Sentence Set 2!')
+    input(' ')
+    clearscreen()
+    spanishsentencemenu()
+
+def spanishsentence1set2():
+    print('''
+        Translate the sentence
+
+        Es hora de codificar.
+        ''')
+    spanishsentencechoice = input('   ').lower()
+
+    if spanishsentencechoice == 'it is time to code':
+        print('''
+        Good job!
+
+        You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentencechoice == 'exit' or spanishsentencechoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence1set2()
+
+def spanishsentence2set2():
+    print('''
+        Translate the sentence
+
+        La última puerta a la derecha.
+        ''')
+    spanishsentencechoice = input('   ').lower()
+
+    if spanishsentencechoice == 'the last door on the right':
+        print('''
+        Good job!
+
+        You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentencechoice == 'exit' or spanishsentencechoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence2set2()
+
+def spanishsentence3set2():
+    print('''
+        Translate the sentence
+
+        Por favor ve a lavar los platos.
+        ''')
+    spanishsentencechoice = input('   ').lower()
+
+    if spanishsentencechoice == 'please go wash the dishes':
+        print('''
+        Good job!
+
+        You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentencechoice == 'exit' or spanishsentencechoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence3set2()
+
+def spanishsentence4set2():
+    print('''
+        Translate the sentence
+
+        Salgamos a comer esta noche.
+        ''')
+    spanishsentencechoice = input('   ').lower()
+
+    if spanishsentencechoice == 'lets go out to eat tonight':
+        print('''
+        Good job!
+
+        You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentencechoice == 'exit' or spanishsentencechoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence4set2()
+
+def spanishsentence5set2():
+    print('''
+        Translate the sentence
+
+        Prefieres rojo o azul.
+        ''')
+    spanishsentencechoice = input('   ').lower()
+
+    if spanishsentencechoice == 'do you prefer red or blue':
+        print('''
+        Good job!
+
+        You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentencechoice == 'exit' or spanishsentencechoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence5set2()
+
+def spanishsentence6set2():
+    print('''
+        Translate the sentence
+
+        Deberías practicar contando.
+        ''')
+    spanishsentencechoice = input('   ').lower()
+
+    if spanishsentencechoice == 'you should practice counting':
+        print('''
+        Good job!
+
+        You got it correct!''')
+        input(' ')
+        clearscreen()
+    elif spanishsentencechoice == 'exit' or spanishsentencechoice == 'quit':
+        print('time to study more next time!')
+        input(' ')
+        clearscreen()
+        spanishsentencemenu()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        spanishsentence6set2()
+
 def spanishcolorrojo():
     print('''
     What is Rojo?
@@ -1338,6 +1512,7 @@ def spanishvocabsetcolors():
     input(' ')
     clearscreen()
     spanishvocabmenu()
+
 
 # entertainment menu
 def entertainmentmenu():
@@ -1941,11 +2116,104 @@ def personalnotesmenu():
     clearscreen()
     print('''
     Welcome to Personal Notes!
-    
-    Sorry this is for my use only
+
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
+
+    personalnotesmenuchoice = input(' ').lower()
+
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesmenu()
+
+
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
     ''')
-    
-    input(' ')
-    mainmenu()
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
+
 
 mainmenu()
