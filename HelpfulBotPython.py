@@ -1,6 +1,6 @@
 import os
 import random
-import ChessMain4 as chess
+from Chess.images import ChessMain4 as chess
 from os import startfile
 from Projects.TicTacToe import TicTacToePygame2
 import cv2
@@ -228,10 +228,11 @@ def spanishvocabmenu():
     1. Vocab set 1
     2. Vocab set 2
     3. Vocab set 3
-    4. Colors
-    5. Numbers
-    6. Months
-    7. Exit
+    4. Verbs
+    5. Colors
+    6. Numbers
+    7. Months
+    8. Exit
     
     
     ''')
@@ -249,19 +250,23 @@ def spanishvocabmenu():
         spanishvocabset3()
         clearscreen()
         spanishvocabmenu()
-    elif spanishvocabmenuchoice == 'vocab set 4' or spanishvocabmenuchoice == '4':
-        spanishvocabsetcolors()
+    elif spanishvocabmenuchoice == 'verbs' or spanishvocabmenuchoice == '4':
+        spanishvocabsetverbs()
         clearscreen()
         spanishvocabmenu()
     elif spanishvocabmenuchoice == 'vocab set 5' or spanishvocabmenuchoice == '5':
-        spanishvocabsetnumbersmenu()
+        spanishvocabsetcolors()
         clearscreen()
         spanishvocabmenu()
     elif spanishvocabmenuchoice == 'vocab set 6' or spanishvocabmenuchoice == '6':
+        spanishvocabsetnumbersmenu()
+        clearscreen()
+        spanishvocabmenu()
+    elif spanishvocabmenuchoice == 'vocab set 7' or spanishvocabmenuchoice == '7':
         spanishvocabsetmonths()
         clearscreen()
         spanishvocabmenu()
-    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '7':
+    elif spanishvocabmenuchoice == 'exit' or spanishvocabmenuchoice == '8':
         clearscreen()
         spanishmenu()
     else:
@@ -269,6 +274,197 @@ def spanishvocabmenu():
         input(' ')
         clearscreen()
         spanishvocabmenu()
+
+def spanishvocabsetverbs():
+    print('''
+
+        Spanish Vocab Menu
+        1. Verb set 1
+        2. Verb set 2
+        3. Verb set 3
+        4. Exit
+
+
+        ''')
+
+    spanishverbmenuchoice = input(' ').lower()
+
+    if spanishverbmenuchoice == 'verb set 1' or spanishverbmenuchoice == '1':
+        clearscreen()
+        spanishverbset1()
+    elif spanishverbmenuchoice == 'verb set 2' or spanishverbmenuchoice == '2':
+        print(underconstruction)
+        print(imsorry)
+        input('')
+        clearscreen()
+        spanishvocabsetverbs()
+    elif spanishverbmenuchoice == 'verb set 3' or spanishverbmenuchoice == '3':
+        print(underconstruction)
+        print(imsorry)
+        input('')
+        clearscreen()
+        spanishvocabsetverbs()
+    elif spanishverbmenuchoice == 'exit' or spanishverbmenuchoice == '4':
+        clearscreen()
+        spanishvocabmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        clearscreen()
+        spanishvocabsetverbs()
+
+def verb1():
+    print('''
+        What does Amar mean?
+        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to love':
+        print('''
+        Good job!
+
+        Amar means to love!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb1()
+
+def verb2():
+    print('''
+            What does Cambiar mean?
+            ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to change':
+        print('''
+            Good job!
+
+            Cambiar means to change!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb2()
+
+
+def verb3():
+    print('''
+                What does Traer mean?
+                ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to bring':
+        print('''
+                Good job!
+
+                Traer means to bring!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb3()
+
+def verb4():
+    print('''
+                    What does Sonar mean?
+                    ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to sound':
+        print('''
+                    Good job!
+
+                    Sonar means to sound!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb4()
+
+def verb5():
+    print('''
+                    What does Quejar mean?
+                    ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to complain':
+        print('''
+                    Good job!
+
+                    Quejar means to complain!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb5()
+
+def verb6():
+    print('''
+                    What does Parar mean?
+                    ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to stop':
+        print('''
+                    Good job!
+
+                    Parar means to stop!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb6()
+
+def spanishverbset1():
+    spanishvocabverblist = [verb1, verb2, verb3, verb4, verb5, verb6]
+    verbset1 = random.sample(spanishvocabverblist, k=6)
+    verbset1[0]()
+    verbset1[1]()
+    verbset1[2]()
+    verbset1[3]()
+    verbset1[4]()
+    verbset1[5]()
+    print('good job! you completed Verb Set 1!')
+    input(' ')
+    clearscreen()
+    spanishvocabsetverbs()
 
 
 def jugarfunction():
@@ -2785,11 +2981,105 @@ def passwordgenerator():
 def personalnotesmenu():
     clearscreen()
     print('''
-    Sorry these notes are only for me, but you can put
-    your own notes here!''')
+    Welcome to Personal Notes!
+
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
 
     personalnotesmenuchoice = input(' ').lower()
-    mainmenu()
+
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesmenu()
+
+
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
+    ''')
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
 
 
 mainmenu()
