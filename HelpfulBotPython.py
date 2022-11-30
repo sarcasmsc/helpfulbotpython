@@ -275,6 +275,8 @@ def spanishvocabmenu():
         clearscreen()
         spanishvocabmenu()
 
+#verbs that i've used - Amar, Cambiar, Traer, Sonar, Quejar, Parar, Jugar, Correr, Caminar, Nadar
+
 def spanishvocabsetverbs():
     print('''
 
@@ -293,11 +295,8 @@ def spanishvocabsetverbs():
         clearscreen()
         spanishverbset1()
     elif spanishverbmenuchoice == 'verb set 2' or spanishverbmenuchoice == '2':
-        print(underconstruction)
-        print(imsorry)
-        input('')
         clearscreen()
-        spanishvocabsetverbs()
+        spanishverbset2()
     elif spanishverbmenuchoice == 'verb set 3' or spanishverbmenuchoice == '3':
         print(underconstruction)
         print(imsorry)
@@ -466,6 +465,157 @@ def spanishverbset1():
     clearscreen()
     spanishvocabsetverbs()
 
+def verb7():
+    print('''
+                        What does Acordar mean?
+                        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to do something':
+        print('''
+                        Good job!
+
+                        Acordar means to do something!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb7()
+
+def verb8():
+    print('''
+                        What does Comer mean?
+                        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to eat':
+        print('''
+                        Good job!
+
+                        Comer means to eat!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb8()
+
+def verb9():
+    print('''
+                        What does Comprender mean?
+                        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to understand':
+        print('''
+                        Good job!
+
+                        Comprender means to understand!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb9()
+
+def verb10():
+    print('''
+                        What does Gustar mean?
+                        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to like':
+        print('''
+                        Good job!
+
+                        Gustar means to like!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb10()
+
+def verb11():
+    print('''
+                        What does Hervir mean?
+                        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to boil':
+        print('''
+                        Good job!
+
+                        Hervir means to boil!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb11()
+
+def verb12():
+    print('''
+                        What does Oír mean?
+                        ''')
+
+    verbvocabanswer = input('   ').lower()
+
+    if verbvocabanswer == 'to hear':
+        print('''
+                        Good job!
+
+                        Oír means to hear!''')
+        input('')
+        clearscreen()
+    elif verbvocabanswer == 'exit' or verbvocabanswer == 'quit':
+        print('time to study more next time!')
+        spanishvocabsetverbs()
+    else:
+        print(imsorrywrong)
+        input(' ')
+        clearscreen()
+        verb12()
+
+def spanishverbset2():
+    spanishvocabverblist = [verb7, verb8, verb9, verb10, verb11, verb12]
+    verbset2 = random.sample(spanishvocabverblist, k=6)
+    verbset2[0]()
+    verbset2[1]()
+    verbset2[2]()
+    verbset2[3]()
+    verbset2[4]()
+    verbset2[5]()
+    print('good job! you completed Verb Set 2!')
+    input(' ')
+    clearscreen()
+    spanishvocabsetverbs()
 
 def jugarfunction():
     print('''
@@ -2983,11 +3133,103 @@ def personalnotesmenu():
     print('''
     Welcome to Personal Notes!
 
-    Sorry this section is just for me! Maybe you can put your own notes here''')
+    1. Birthdays
+    2. Emails
+    3. League Accounts
+    4. Journal
+    5. Python Ideas
+    6. Exit''')
 
     personalnotesmenuchoice = input(' ').lower()
-    mainmenu()
 
+    if personalnotesmenuchoice == 'birthdays' or personalnotesmenuchoice == '1':
+        personalnotesbirthdaysmenu()
+    elif personalnotesmenuchoice == 'emails' or personalnotesmenuchoice == '2':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'league accounts' or personalnotesmenuchoice == '3':
+        personalnotesleagueaccounts()
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'journal' or personalnotesmenuchoice == '4':
+        print(underconstruction)
+        personalnotesmenu()
+    elif personalnotesmenuchoice == 'python ideas' or personalnotesmenuchoice == '5':
+        personalnotespythonideasmenu()
+    elif personalnotesmenuchoice == 'exit' or personalnotesmenuchoice == '6':
+        clearscreen()
+        mainmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesmenu()
+
+
+def personalnotesbirthdaysmenu():
+    print('''
+    Who's Birthday information did you need?
+
+    1. Siblings
+    2. Max
+    3. April
+    4. Others
+    5. Exit
+
+    ''')
+
+    personalnotesbirthdaysmenuchoice = input(' ').lower()
+
+    if personalnotesbirthdaysmenuchoice == 'siblings' or personalnotesbirthdaysmenuchoice == '1':
+        print(siblingbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'max' or personalnotesbirthdaysmenuchoice == '2':
+        print(maxbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'april' or personalnotesbirthdaysmenuchoice == '3':
+        print(aprilbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'others' or personalnotesbirthdaysmenuchoice == '4':
+        print(othersbirthday)
+        input(' ')
+        clearscreen()
+        personalnotesbirthdaysmenu()
+    elif personalnotesbirthdaysmenuchoice == 'exit' or personalnotesbirthdaysmenuchoice == '5':
+        clearscreen()
+        personalnotesmenu()
+    else:
+        print(imsorry)
+        input(' ')
+        personalnotesbirthdaysmenu()
+
+
+siblingbirthday = '''Phenix's birthday is on March 17th
+Chynna's birthday is on March 28th
+Reeve's birthday is on August 29th
+'''
+maxbirthday = "Max's birthday is on June 13th"
+aprilbirthday = "April's birthday is on September 20th"
+otherbirthdays = '''Goose's birthday is on May 2nd
+                 River's birthday is on September 22nd
+                 Steven's birthday is on May 28th'''
+
+
+def personalnotesleagueaccounts():
+    print('Here is your league account info')
+    f = open('D:\Sterling\Passwords\LoLNamesandPass.txt', 'r')
+    print(f.read())
+    print('Would you like to open the text file with notepad?')
+    personalnotesleagueaccountschoice = input(' ').lower()
+
+    if personalnotesleagueaccountschoice == 'yes':
+        startfile('D:\Sterling\Passwords\LoLNamesandPass.txt')
+        personalnotesmenu()
+    else:
+        personalnotesmenu()
 
 
 mainmenu()
